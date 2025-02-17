@@ -529,9 +529,6 @@ void ImageBMP::fillRectangleWithColor(unsigned int x0, unsigned int y0, unsigned
 /*NOTE: this method will be swapping x and y */
 void ImageBMP::setPixelToColor_withThickness(unsigned int x, unsigned int y, const Color& color, unsigned int thickness)
 {
-	std::swap(x, y); //ridiculous thing to do ... maybe not so much - image coordinates "naturally" flip x and y
-
-	// Ensure the center pixel is within bounds
 	if (x >= infoHeader.imageWidth || y >= infoHeader.imageHeight)
 	{
 		std::cout << "Error: Center pixel out of bounds.\n";
